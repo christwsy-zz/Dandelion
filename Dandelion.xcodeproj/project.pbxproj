@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		31C154A8205B4E9F003FF857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C154A7205B4E9F003FF857 /* AppDelegate.swift */; };
-		31C154AA205B4E9F003FF857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C154A9205B4E9F003FF857 /* ViewController.swift */; };
 		31C154AD205B4E9F003FF857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C154AB205B4E9F003FF857 /* Main.storyboard */; };
 		31C154AF205B4E9F003FF857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C154AE205B4E9F003FF857 /* Assets.xcassets */; };
 		31C154B2205B4E9F003FF857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C154B0205B4E9F003FF857 /* LaunchScreen.storyboard */; };
+		BADB7EBBE22C3EDB0931C12F /* Pods_Dandelion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25875C07B3AEDFBEECB030B2 /* Pods_Dandelion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25875C07B3AEDFBEECB030B2 /* Pods_Dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C717EE788C98950E660904A /* Pods-Dandelion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dandelion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dandelion/Pods-Dandelion.release.xcconfig"; sourceTree = "<group>"; };
 		31C154A4205B4E9F003FF857 /* Dandelion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dandelion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C154A7205B4E9F003FF857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		31C154A9205B4E9F003FF857 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		31C154AC205B4E9F003FF857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31C154AE205B4E9F003FF857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31C154B1205B4E9F003FF857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31C154B3205B4E9F003FF857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99F9E3366C48F55A837CDA33 /* Pods-Dandelion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dandelion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dandelion/Pods-Dandelion.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADB7EBBE22C3EDB0931C12F /* Pods_Dandelion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,8 @@
 			children = (
 				31C154A6205B4E9F003FF857 /* Dandelion */,
 				31C154A5205B4E9F003FF857 /* Products */,
+				DB615979D36D64E1122579A9 /* Pods */,
+				42304A75822BA6B7A90E2D01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +60,61 @@
 			isa = PBXGroup;
 			children = (
 				31C154A7205B4E9F003FF857 /* AppDelegate.swift */,
-				31C154A9205B4E9F003FF857 /* ViewController.swift */,
 				31C154AB205B4E9F003FF857 /* Main.storyboard */,
+				31C154B9205B50E9003FF857 /* API */,
+				31C154BD205B527C003FF857 /* Model */,
+				31C154BC205B5263003FF857 /* Module */,
+				31C154BB205B521B003FF857 /* Resource */,
+			);
+			path = Dandelion;
+			sourceTree = "<group>";
+		};
+		31C154B9205B50E9003FF857 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		31C154BB205B521B003FF857 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				31C154AE205B4E9F003FF857 /* Assets.xcassets */,
 				31C154B0205B4E9F003FF857 /* LaunchScreen.storyboard */,
 				31C154B3205B4E9F003FF857 /* Info.plist */,
 			);
-			path = Dandelion;
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		31C154BC205B5263003FF857 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		31C154BD205B527C003FF857 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42304A75822BA6B7A90E2D01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25875C07B3AEDFBEECB030B2 /* Pods_Dandelion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB615979D36D64E1122579A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99F9E3366C48F55A837CDA33 /* Pods-Dandelion.debug.xcconfig */,
+				2C717EE788C98950E660904A /* Pods-Dandelion.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31C154B6205B4E9F003FF857 /* Build configuration list for PBXNativeTarget "Dandelion" */;
 			buildPhases = (
+				C96A8B12FBB5776B868337F3 /* [CP] Check Pods Manifest.lock */,
 				31C154A0205B4E9F003FF857 /* Sources */,
 				31C154A1205B4E9F003FF857 /* Frameworks */,
 				31C154A2205B4E9F003FF857 /* Resources */,
+				23BF66C826A05889ACD78577 /* [CP] Embed Pods Frameworks */,
+				DFB51A0A1163EEC2CA7B31FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +187,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23BF66C826A05889ACD78577 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dandelion/Pods-Dandelion-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftUtilities/RxSwiftUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dandelion/Pods-Dandelion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C96A8B12FBB5776B868337F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dandelion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB51A0A1163EEC2CA7B31FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dandelion/Pods-Dandelion-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31C154A0205B4E9F003FF857 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31C154AA205B4E9F003FF857 /* ViewController.swift in Sources */,
 				31C154A8205B4E9F003FF857 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,31 +397,35 @@
 		};
 		31C154B7205B4E9F003FF857 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F9E3366C48F55A837CDA33 /* Pods-Dandelion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ABJ4EHX6C9;
 				INFOPLIST_FILE = Dandelion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kriswang.Dandelion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		31C154B8205B4E9F003FF857 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C717EE788C98950E660904A /* Pods-Dandelion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ABJ4EHX6C9;
 				INFOPLIST_FILE = Dandelion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kriswang.Dandelion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
