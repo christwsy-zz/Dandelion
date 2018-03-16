@@ -9,14 +9,20 @@
 import Foundation
 import Moya
 import RxSwift
+import Alamofire
 
+// API Endpoints and settings/parameters
 enum APIService {
-    case sendViaSms(phoneNumbers: [String], content: String)
-    case sendViaEmail(emails: [String], content: String)
+    case sendViaSms(phoneNumber: String, content: String)
+    case sendViaEmail(email: String, content: String)
 
     static let provider = RxMoyaProvider<APIService>(requestClosure: { (endpoint: Endpoint<APIService>, done: @escaping MoyaProvider<APIService>.RequestResultClosure) in
         var request = endpoint.urlRequest! as URLRequest
-    })
+        Alamofire.request(request).responseJSON() {
+            responseJson in
+            print(responseJson)
+        }
+    }, plugins:[NetworkLoggerPlugin(verbose: true, cURL: false)])
 }
 
 extension APIService: TargetType {
@@ -35,10 +41,10 @@ extension APIService: TargetType {
     
     var parameters: [String: Any]? {
         switch self {
-        case .sendViaEmail(let emails, let content):
-            return ["emails": emails, "content": content]
-        case .sendViaSms(let phoneNumbers, let content):
-            return ["phoneNumbers": phoneNumbers, "content": content]
+        case .sendViaEmail(let email, let content):
+            return ["email": email, "content": content]
+        case .sendViaSms(let phoneNumber, let content):
+            return ["phoneNumber": phoneNumber, "content": content]
         }
     }
     

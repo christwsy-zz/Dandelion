@@ -10,13 +10,14 @@ import Foundation
 import RxSwift
 import SwiftyJSON
 
+// Wrapper for sending messege service
 class MessageService {
     static let sharedInstance = MessageService()
     
     let bag = DisposeBag()
     
-    func sendViaSms(phoneNumbers: [String], content: String, completion: @escaping (Bool) -> Void) {
-        APIService.provider.request(.sendViaSms(phoneNumbers: phoneNumbers, content: content)).subscribe(onSuccess: { response in
+    func sendViaSms(phoneNumber: String, content: String, completion: @escaping (Bool) -> Void) {
+        APIService.provider.request(.sendViaSms(phoneNumber: phoneNumber, content: content)).subscribe(onSuccess: { response in
             debugPrint(response)
             completion(true)
         }, onError: { error in
@@ -25,8 +26,8 @@ class MessageService {
         }).disposed(by: bag)
     }
     
-    func sendViaEmail(emails: [String], content: String, completion: @escaping (Bool) -> Void) {
-        APIService.provider.request(.sendViaEmail(emails: emails, content: content)).subscribe(onSuccess: { response in
+    func sendViaEmail(email: String, content: String, completion: @escaping (Bool) -> Void) {
+        APIService.provider.request(.sendViaEmail(email: email, content: content)).subscribe(onSuccess: { response in
             debugPrint(response)
             completion(true)
         }, onError: { error in

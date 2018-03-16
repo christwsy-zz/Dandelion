@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Constants used by the app
 var ServerURL: String {
     return Bundle.main.object(forInfoDictionaryKey: "ServerURL") as! String
 }
